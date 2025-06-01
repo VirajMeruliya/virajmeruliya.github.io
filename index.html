@@ -1,50 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Viraj Meruliya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
+      background-color: #f4f6f9;
+      color: #2c2c2c;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     header img {
       width: 150px;
-      border-radius: 100px;
+      border-radius: 50%;
       margin-bottom: 1rem;
     }
     header h1 {
-      margin: 0.2rem 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      margin: 0.3rem 0;
+    }
+    header p span {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      color: #4a4a4a;
+    }
+    #typing {
+      display: inline-block;
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      color: #555;
+      border-right: 2px solid #555;
+      padding-right: 6px;
+      animation: blink 1s infinite step-end;
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
     }
     main {
-      max-width: 800px;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+      gap: 2rem;
     }
     section {
-      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
     h2 {
-      border-bottom: 2px solid #eaeaea;
+      border-bottom: 2px solid #e0e0e0;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
     }
     a {
-      color: #007acc;
+      color: #003366;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #005599;
+    }
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+      section.full {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 </head>
@@ -52,10 +87,10 @@
   <header>
     <img src="my_image_1.jpeg" alt="Viraj Meruliya">
     <h1>Viraj Meruliya</h1>
-    <p>PhD Candidate in Theoretical Physics | Data Science & Machine Learning Enthusiast</p>
+    <p><span id="typing"></span></p>
   </header>
   <main>
-    <section>
+    <section class="full">
       <h2>About Me</h2>
       <p>I’m a fourth-year PhD student in theoretical physics at McGill University, supervised by Prof. Alex Maloney. My research focuses on two-dimensional Conformal Field Theory and three-dimensional Gravity, with particular emphasis on non-perturbative effects and chaotic properties. I’m also deeply interested in data science and machine learning, particularly the application of physics-inspired methods to AI systems.</p>
     </section>
@@ -68,11 +103,52 @@
       <p>I'm currently exploring machine learning through projects like time-series prediction and classification with XGBoost, and attending Applied ML and NLP courses at McGill. I’ve participated in the Erdős Institute Bootcamp and mentored data science teams through full pipelines.</p>
     </section>
     <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>ML:</strong> Classification of brain activity using XGBoost and deep learning techniques.</li>
+        <li><strong>Physics:</strong> Resurgence in Liouville Theory, black hole microstate counting using modular invariance.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Publications</h2>
+      <p>Coming soon — papers and preprints with BibTeX export.</p>
+    </section>
+    <section>
+      <h2>Blog</h2>
+      <p>Thoughts on physics, machine learning, and the crossover of ideas. (Coming soon)</p>
+    </section>
+    <section class="full">
       <h2>CV & Contact</h2>
       <p><a href="https://drive.google.com/file/d/1hE8H9G5Oe1xvCECvTLdOqA2kG0x/view">Download CV</a></p>
       <p>Email: viraj.meruliya@mail.mcgill.ca<br>
          LinkedIn: <a href="https://linkedin.com/in/viraj-meruliya">viraj-meruliya</a></p>
     </section>
   </main>
+  <script>
+    const titles = ["Theoretical Physicist", "Data Scientist", "ML Enthusiast"];
+    let index = 0, char = 0;
+    const typing = document.getElementById("typing");
+
+    function type() {
+      if (char <= titles[index].length) {
+        typing.textContent = titles[index].slice(0, char++);
+        setTimeout(type, 100);
+      } else {
+        setTimeout(() => erase(), 1500);
+      }
+    }
+
+    function erase() {
+      if (char > 0) {
+        typing.textContent = titles[index].slice(0, --char);
+        setTimeout(erase, 50);
+      } else {
+        index = (index + 1) % titles.length;
+        setTimeout(type, 200);
+      }
+    }
+
+    type();
+  </script>
 </body>
 </html>
