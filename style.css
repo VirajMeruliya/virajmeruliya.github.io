@@ -1,13 +1,14 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f4f6f9;
+  background-color: #f8f9fa;
   color: #2c2c2c;
   margin: 0;
   padding: 0;
 }
 header {
-  background-color: #ffffff;
+  background-color: #003366;
+  color: white;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -25,14 +26,14 @@ header h1 {
 header p span {
   font-family: 'Merriweather', serif;
   font-size: 1rem;
-  color: #4a4a4a;
+  color: #e0e0e0;
 }
 #typing {
   display: inline-block;
   font-family: 'Merriweather', serif;
   font-size: 1rem;
-  color: #555;
-  border-right: 2px solid #555;
+  color: #ddd;
+  border-right: 2px solid #ddd;
   padding-right: 6px;
   animation: blink 1s infinite step-end;
 }
@@ -48,13 +49,13 @@ main {
   gap: 2rem;
 }
 section {
-  background: #fff;
+  background: #ffffff;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 h2 {
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #d1d1d1;
   padding-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
 }
