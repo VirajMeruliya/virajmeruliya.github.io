@@ -271,33 +271,33 @@
         }
 
         /* Research Interests */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .interests-list {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .interest-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
+        .interests-list li {
+            margin-bottom: 1.5rem;
+            list-style: none;
+            position: relative;
+            padding-left: 2rem;
         }
 
-        .interest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow);
-            border-color: var(--accent-primary);
-        }
-
-        .interest-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+        .interests-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
             color: var(--accent-primary);
         }
 
-        .interest-card p {
+        .interests-list h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .interests-list p {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
@@ -624,14 +624,14 @@
                     <div class="timeline-content">
                         <h3>Risk Manager</h3>
                         <div class="timeline-meta">RBC Global Asset Management | 2025 - Present</div>
-                        <p>Applying analytical expertise from physics to quantitative risk modeling and financial decision-making. Bridging theoretical science with practical applications in asset management.</p>
+                        <p>Applying analytical expertise to quantitative risk modeling and financial decision-making. Involved in developing and building factor models for risk management and portfolio optimization.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>PhD in Physics</h3>
                         <div class="timeline-meta">McGill University | 2021 - 2025</div>
-                        <p>Research focused on quantum field theories, gravitational physics, and the AdS/CFT correspondence. Developed expertise in computational physics and data analysis methods.</p>
+                        <p>My thesis focused the mathematical study of quantum field theories, gravitational physics, and the AdS/CFT correspondence. It involved how complex systems with many interacting degrees of freedom like black holes, elementary particles, and systems in statistical mechanics can be described through the non-perturbative phenomena.</p>
                         
                         <!-- Teaching Experience Dropdown -->
                         <details style="margin-top: 1.5rem; background: var(--bg-secondary); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
@@ -659,7 +659,7 @@
                     <div class="timeline-content">
                         <h3>BS-MS in Physics</h3>
                         <div class="timeline-meta">IISER Pune | 2016 - 2021</div>
-                        <p>Dual degree program with specialization in theoretical physics. Recipient of the Institute Gold Medal for academic excellence.</p>
+                        <p>My master's thesis investigated quantum gravity in AdS spacetime and conformal field theories through the computations of partition functions which describe the energy spectrum of these systems.</p>
                     </div>
                 </div>
             </div>
@@ -677,26 +677,17 @@
         <div class="container">
             <div class="section-header">
                 <h2>Research Interests</h2>
-                <p>Exploring the fundamental nature of reality through theoretical physics and applying those insights to real-world problems</p>
             </div>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <h3>Quantum Field Theory</h3>
-                    <p>Understanding the properties and dynamics of quantum field theories, particularly in the context of conformal symmetry and holography.</p>
-                </div>
-                <div class="interest-card">
-                    <h3>Gravitational Physics</h3>
-                    <p>Investigating the deep connections between quantum mechanics and gravity through the AdS/CFT correspondence and quantum gravity.</p>
-                </div>
-                <div class="interest-card">
-                    <h3>Complex Systems</h3>
-                    <p>Applying theoretical physics methods to understand emergent phenomena in complex systems across various domains.</p>
-                </div>
-                <div class="interest-card">
+            <ul class="interests-list">
+                <li>
                     <h3>Data Science & ML</h3>
                     <p>Leveraging machine learning and computational methods to solve challenges in climate risk, healthcare, and quantitative finance.</p>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <h3>Quantum Field Theory and Gravitational Physics</h3>
+                    <p>Understanding the properties and dynamics of quantum field theories, particularly in the context of conformal symmetry and holography. Investigating the deep connections between quantum mechanics and gravity through the AdS/CFT correspondence and quantum gravity.</p>
+                </li>
+            </ul>
         </div>
     </section>
 
