@@ -19,11 +19,11 @@
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
             --bg-card: #ffffff;
-            --text-primary: #000000;
-            --text-secondary: #1a1a1a;
-            --text-muted: #4a5568;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
             --accent-primary: #3b82f6;
-            --accent-secondary: #64f65c;
+            --accent-secondary: #8b5cf6;
             --border-color: #e2e8f0;
             --shadow: rgba(0, 0, 0, 0.1);
         }
@@ -32,11 +32,11 @@
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
             --bg-card: #1e293b;
-            --text-primary: #ffffff;
-            --text-secondary: #f5f5f5;
-            --text-muted: #d0d0d0;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #64f65c;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-primary: #60a5fa;
+            --accent-secondary: #a78bfa;
             --border-color: #334155;
             --shadow: rgba(0, 0, 0, 0.3);
         }
@@ -65,10 +65,6 @@
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             transition: all 0.3s ease;
-        }
-
-        [data-theme="dark"] nav {
-            background: var(--bg-secondary);
         }
 
         nav.scrolled {
@@ -108,10 +104,6 @@
             transition: color 0.3s ease;
         }
 
-        [data-theme="dark"] .nav-links a {
-            color: var(--text-primary);
-        }
-
         .nav-links a:hover {
             color: var(--accent-primary);
         }
@@ -119,16 +111,12 @@
         .theme-toggle {
             background: none;
             border: none;
-            color: #1a1a1a;
+            color: var(--text-primary);
             cursor: pointer;
             font-size: 1.25rem;
             padding: 0.5rem;
             border-radius: 8px;
             transition: background 0.3s ease;
-        }
-
-        [data-theme="dark"] .theme-toggle {
-            color: #ffffff;
         }
 
         .theme-toggle:hover {
@@ -155,7 +143,6 @@
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--text-primary);
         }
 
         .hero-text .gradient-text {
@@ -200,7 +187,7 @@
 
         .btn-secondary {
             background: var(--bg-secondary);
-            color: var(--text-secondary);
+            color: var(--text-primary);
             border: 2px solid var(--border-color);
         }
 
@@ -260,11 +247,10 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--text-primary);
         }
 
         .section-header p {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             font-size: 1.125rem;
             max-width: 600px;
             margin: 0 auto;
@@ -300,56 +286,6 @@
         .interest-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow);
-            border-color: var(--accent-primary);
-        }
-
-        .project-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--accent-primary);
-        }
-
-        .project-card .project-meta {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .project-card a:hover {
-            text-decoration: underline;
         }
 
         /* Education & Experience */
@@ -395,7 +331,6 @@
         .timeline-content h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
-            color: var(--text-primary);
         }
 
         .timeline-meta {
@@ -608,6 +543,22 @@
                         <a href="https://scholar.google.com/citations?user=BWUUCfsAAAAJ&hl=en" target="_blank" class="btn btn-secondary">View Publications</a>
                     </div>
                 </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <h3 style="margin-bottom: 1rem;">Quick Facts</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>🎓 Position:</strong> Risk Manager, RBC GAM</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>📚 Education:</strong> PhD Physics, McGill University</p>
+                        <p style="margin-bottom: 1rem;"><strong>🔬 Research:</strong> Quantum Gravity & Complex Systems</p>
+                        <div class="social-links">
+                            <a href="https://scholar.google.com/citations?user=BWUUCfsAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">🎓</a>
+                            <a href="https://www.researchgate.net/profile/Viraj-Meruliya" target="_blank" aria-label="ResearchGate">📊</a>
+                            <a href="https://www.linkedin.com/in/viraj-meruliya/" target="_blank" aria-label="LinkedIn">
+                                <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                            <a href="https://github.com/VirajMeruliya" target="_blank" aria-label="GitHub">💻</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -695,22 +646,6 @@
                 <div class="interest-card">
                     <h3>Data Science & ML</h3>
                     <p>Leveraging machine learning and computational methods to solve challenges in climate risk, healthcare, and quantitative finance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects & Blogs -->
-    <section id="projects" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Projects & Blogs</h2>
-                <p>Exploring ideas through writing and building projects</p>
-            </div>
-            <div class="projects-grid">
-                <!-- Projects will be added here -->
-                <div style="text-align: center; padding: 3rem; color: var(--text-muted); grid-column: 1/-1;">
-                    <p>Coming soon...</p>
                 </div>
             </div>
         </div>
